@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e24;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1, h2 { 
+    margin-bottom: 10px; 
+}
+
+.screen {
+    width: 300px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px 0;
+    box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+}
+
+.cinema-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* --- ESTADOS DE LAS BUTACAS --- */
+
+/* Gris - Disponible por defecto */
+.seat {
+    width: 50px;
+    height: 50px;
+    background-color: #808080; 
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #000;
+    transition: background 0.3s;
+}
+
+/* Borde verde al hacer click en la UI */
+.seat.selected {
+    border: 3px solid #00ff00;
+}
+
+/* Amarillo - Bloqueada temporalmente */
+.seat.bloqueada {
+    background-color: #ffeb3b !important; 
+    cursor: not-allowed;
+}
+
+/* Rojo - Reservada definitivamente */
+.seat.reservada {
+    background-color: #f44336 !important; 
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* --- COMPONENTES DE CONTROL Y FEEDBACK --- */
+
+.panel-control {
+    background-color: #2a2a35;
+    padding: 20px;
+    border-radius: 8px;
+    width: 320px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-buy { 
+    background-color: #4caf50; 
+    color: white; 
+}
+
+.btn-pay { 
+    background-color: #00bcd4; 
+    color: white; 
+    display: none; 
+}
+
+.timer-box {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ffeb3b;
+    display: none;
+}
+
+.feedback-msg {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+}
+
+/* Variaciones del cuadro de mensajes */
+.success { background-color: #2e7d32; color: #fff; }
+.error { background-color: #c62828; color: #fff; }
+.info { background-color: #0277bd; color: #fff; }

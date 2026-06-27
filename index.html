@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketera de Cine - Reserva de Butacas</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <h1>Ticketera - Reserva de Cine</h1>
+    <h3>Película: Avengers: Endgame</h3>
+    
+    <div class="screen">PANTALLA</div>
+
+    <div class="cinema-container" id="cinema-map">
+        <div class="seat" data-id="A1">A1</div>
+        <div class="seat" data-id="A2">A2</div>
+        <div class="seat" data-id="A3">A3</div>
+        <div class="seat" data-id="A4">A4</div>
+    </div>
+
+    <div class="panel-control">
+        <p>Butaca Seleccionada: <span id="selected-seat-text">Ninguna</span></p>
+        <button id="btn-comprar" class="btn-buy" disabled>Iniciar Reserva (Comprar)</button>
+        <button id="btn-pagar" class="btn-pay">Confirmar y Pagar</button>
+        
+        <div class="timer-box" id="timer-container">
+            Tiempo restante: <span id="timer">05:00</span>
+        </div>
+        
+        <div class="feedback-msg" id="feedback"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
